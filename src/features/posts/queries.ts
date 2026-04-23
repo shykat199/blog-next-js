@@ -91,3 +91,14 @@ const mockPosts: Post[] = [
 export async function getPublishedPosts() {
   return mockPosts
 }
+
+
+export async function getPostBySlug(slug: string) {
+  const post = mockPosts.find((p) => p.slug === slug)
+
+  if (!post) {
+    throw new Error('Post not found')
+  }
+
+  return post
+}
