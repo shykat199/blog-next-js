@@ -2,18 +2,27 @@ export type Post = {
   id: string
   title: string
   slug: string
-  excerpt: string
-  coverImage: string
-  publishedAt: string
-  readingTime: string
-  category: {
-    name: string
+  description: string
+  image: string
+  created_at: string
+  status: number
+
+  categories: {
+    id: string
+    title: string
     slug: string
   }
-  author: {
+
+  users: {
+    id: string
     name: string
-    username: string
-    avatar: string
+    image: string
   }
-  featured?: boolean
+}
+
+
+export type Category = {
+  id: string
+  title: string
+  slug: string
 }
